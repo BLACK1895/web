@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="styless.css"> 
+</head>
+<body>
+    <header class="banner-header">
+        <img src="banner.webp" alt="Banner de la página" class="banner" id="inicio">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="Pproductos.html">Productos</a></li>
+                <li><a href="Formulario.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="search-button" onclick="toggleSearch()"><img src="lupa.png" alt="lupa" class="search-icon"></button>
+        
+            <form class="search-form" action="buscar.html" method="GET" id="search-form" style="display: none;">
+                <input type="text" placeholder="Buscar productos..." name="query" required>
+                <button type="submit">Buscar</button>
+            </form>
+            <a href="carrito.html" class="cart-button"> 
+                <img src="carrito.png" alt="Carrito" class="cart-icon">
+            </a>
+    </header>
+
+    <div class="container">
+        <h1>Nuestros Productos</h1>
+        <div class="product-grid">
+             <a href="practico.html" class="product-item"> 
+                <img src="img-1.png" alt="Producto 1">
+                <h2>Producto 1</h2>
+                <p class="price">$52.500</p>
+                <button class="btn-comprar">Comprar ahora</button>
+            </a>
+            <a href="producto1.html" class="product-item"> 
+                <img src="pro-1.jpg" alt="Producto 2">
+                <h2>Producto 2</h2>
+                <p class="price">$32.500</p>
+                <button class="btn-comprar">Comprar ahora</button>
+            </a>
+            <a href="producto2.html" class="product-item">
+                <img src="dc-2.jpg" alt="Producto 3">
+                <h2>Producto 3</h2>
+                <p class="price">$28.000</p>
+                <button class="btn-comprar">Comprar ahora</button>
+            </a>
+            <a href="producto3.html" class="product-item">
+                <img src="pret-1.webp" alt="Producto 4">
+                <h2>Producto 4</h2>
+                <p class="price">$14.000</p>
+                <button class="btn-comprar">Comprar ahora</button>
+            </a>
+
+        </div>
+    </div>
+
+    <script src="scriptpractico.js"></script>
+</body>
+</html>

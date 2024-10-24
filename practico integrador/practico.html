@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detalle del producto</title>
+        <link rel="stylesheet" href="styless.css">
+    </head>
+
+    <body>
+        <header class="banner-header">
+            <img src="banner.webp" alt="Banner de la página" class="banner" id="inicio">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#Inicio">inicio</a></li>
+                    <li><a href="Pproductos.html">Producto</a></li>
+                    <li><a href="Formulario.html">Contacto</a></li>
+                </ul>
+            </nav>
+        
+            <button class="search-button" onclick="toggleSearch()"><img src="lupa.png" alt="lupa" class="search-icon"></button>
+        
+            <form class="search-form" action="buscar.html" method="GET" id="search-form" style="display: none;">
+                <input type="text" placeholder="Buscar productos..." name="query" required>
+                <button type="submit">Buscar</button>
+            </form>
+            <a href="carrito.html" class="cart-button"> 
+                <img src="carrito.png" alt="Carrito" class="cart-icon">
+            </a>
+        </header>
+
+        <div class="container">
+            <div class="product-gallery">
+                <img id="main-image" src="img-1.png" alt="imagen del producto" class="main-image">
+                <div class="thumbnails">
+                    <img src="img-1.png" alt="img-1" class="thumbnail" onclick="changeImage('img-1.png')">
+                    <img src="img-2.png" alt="img-2" class="thumbnail" onclick="changeImage('img-2.png')">
+                    <img src="portada.png" alt="img-3" class="thumbnail" onclick="changeImage('portada.png')">
+                </div>
+            </div>
+
+            <div class="product-details">
+                <h1>Royal canin: performace control</h1>
+                <p class="price">$52.500</p>
+                <p class="stock">Stock disponible: <span id="stock-quantity">4</span> unidades</p>
+
+                <label for="quantity">Cantidad</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="4" value="1">
+
+                <div class="buttons">
+                    <button id="buy-now">Comprar ahora</button>
+                    <button id="add-to-cart">Agregar al Carrito</button>
+                </div>
+
+                <div class="rating">
+                    <span>Clasificación</span>
+                    <div class="stars">
+                        <span class="star" onclick="rateProduct(1)">★</span>
+                        <span class="star" onclick="rateProduct(2)">★</span>
+                        <span class="star" onclick="rateProduct(3)">★</span>
+                        <span class="star" onclick="rateProduct(4)">★</span>
+                        <span class="star" onclick="rateProduct(5)">★</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-products">
+                <h2>Productos relacionados</h2>
+                <div class="product-list">
+                    <div class="related-product">
+                        <a href="producto1.html">
+                        <img src="pro-1.jpg" alt="Producto relacionado 1">
+                        <p>puppy foods</p>
+                        <p>$38.500</p>
+                    </div>
+                    <div class="related-product">
+                        <a href="producto2.html">
+                        <img src="dc-1.jpg" alt="Producto relacionado 2">
+                        <p>Dog Chow</p>
+                        <p>$28.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scriptpractico.js"></script>
+    </body>
+</html>

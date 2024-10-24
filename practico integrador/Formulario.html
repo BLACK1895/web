@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <header class="banner-header">
+        <img src="banner.webp" alt="Banner de la página" class="banner" id="inicio">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#accesorios">Inicio</a></li>
+                <li><a href="Pproductos.html">Productos</a></li>
+                <li><a href="Formulario.html">Contacto</a></li> 
+            </ul>
+        </nav>
+        <button class="search-button" onclick="toggleSearch()"><img src="lupa.png" alt="lupa" class="search-icon"></button>
+        
+            <form class="search-form" action="buscar.html" method="GET" id="search-form" style="display: none;">
+                <input type="text" placeholder="Buscar productos..." name="query" required>
+                <button type="submit">Buscar</button>
+            </form>
+            <a href="carrito.html" class="cart-button"> 
+                <img src="carrito.png" alt="Carrito" class="cart-icon">
+            </a>
+    </header>
+
+    <div class="container">
+        <h1>Contáctanos</h1>
+        <form id="contact-form" onsubmit="return validateForm()">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre.." required maxlength="50">
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico.." required>
+
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="Tu teléfono.." required maxlength="10">
+
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Escribe tu mensaje.." rows="6" required maxlength="300"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="submitted-data"></div>
+    </div>
+
+
+    <script src="scriptpractico.js"></script>
+</body>
+</html>
+
