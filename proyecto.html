@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatDogPet</title>
+    <link rel="stylesheet" href="styles.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        .contenedor-carrusel {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .carrusel {
+            width: 70%;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .texto-al-lado {
+            max-width: 25%;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <header class="banner-header">
+
+        <img src="images/file.png" alt="Banner de la página" class="banner" id="inicio">
+
+        <nav class="navbar">
+
+            <ul>
+
+                <li><a href="#Inicio">Inicio</a></li>
+
+                <li><a href="Pproductos.html">Producto</a></li>
+
+                <li><a href="Formulario.html">Contacto</a></li>
+
+            </ul>
+
+        </nav>
+
+    
+
+        <button class="search-button" onclick="toggleSearch()"><img src="images/lupa.png" alt="lupa" class="search-icon"></button>
+        
+
+        <form class="search-form" action="buscar.html" method="GET" id="search-form" style="display: none;">
+
+            <input type="text" placeholder="Buscar productos..." name="query" required>
+
+            <button type="submit">Buscar</button>
+
+        </form>
+
+        <a href="carrito.html" class="cart-button"> 
+
+            <img src="images/carrito.png" alt="Carrito" class="cart-icon">
+
+        </a>
+
+    </header>
+    
+        <div class="contenedor-carrusel">
+            <div class="carrusel">
+                <div class="carrusel-imagenes">
+                    <img src="images/dogis.png" alt="Imagen 1" class="active">
+                    <img src="images/gatooferta.png" alt="Imagen 2">
+                    <img src="images/oferta.png" alt="Imagen 3">
+                </div>
+                <button class="btn-prev" onclick="moverCarrusel(-1)">&#10094;</button>
+                <button class="btn-next" onclick="moverCarrusel(1)">&#10095;</button>
+            </div>
+            <div class="texto-al-lado">
+                <h1>¡Bienvenidos! Calidad 100% asegurada para tu mascota</h1>
+                <p>En nuestra tienda, nos comprometemos a ofrecer productos de la más alta calidad para el bienestar de tu mascota. Cada artículo es cuidadosamente seleccionado y evaluado para garantizar que cumple con los más estrictos estándares. Con nosotros, puedes tener la tranquilidad de que la salud y felicidad de tu compañero están en las mejores manos. ¡Calidad 100% asegurada para tu mascota!</p>
+            </div>
+        </div>
+
+        <div class="logos">
+            <div class="logo-item">
+                <img src="images/envio.png">
+                <p>Envios sin cargo</p>
+            </div>
+            <div class="logo-item">
+                <img src="images/descuento.png">
+                <p>Descuentos</p>
+            </div>
+            <div class="logo-item">
+                <img src="images/tarjetas.png">
+                <p>Paga con tarjeta</p>
+            </div>
+        </div>
+
+        <div class="imagenes-botones">
+            <a href="link-a-perros.html" class="boton-imagen">
+                <img src="images/perri.png" alt="Perros" class="imagen-boton">
+                <p>Perros</p>
+            </a>
+            <a href="link-a-gatos.html" class="boton-imagen">
+                <img src="images/gato.jpg" alt="Gatos" class="imagen-boton">
+                <p>Gatos</p>
+            </a>
+            <a href="link-a-productos.html" class="boton-imagen">
+                <img src="images/perritogatito.jpg" alt="Productos" class="imagen-boton">
+                <p>Productos</p>
+            </a>
+        </div>
+
+        <div class="franja-roja">
+            ¡PRODUCTOS CON DESCUENTOS PARA SU MASCOTA!
+        </div>
+
+        <div class="galeria-imagenes">
+            <div class="imagen">
+              <img src="images/dalmata.png" alt="Descripción de la imagen 1">
+            </div>
+            <div class="imagen">
+              <img src="images/juegos.png" alt="Descripción de la imagen 2">
+            </div>
+            <div class="imagen">
+              <img src="images/juntos.png" alt="Descripción de la imagen 3">
+            </div>
+            <div class="imagen">
+              <img src="images/acomer.png" alt="Descripción de la imagen 4">
+            </div>
+        </div>
+
+        
+        <div class="footer-rojo">
+            <div class="footer-seccion">
+                <h3>Contáctanos</h3>
+                <p>Tel: 0810-200-2022</p>
+                <p>Email: catdogpet@gmail.com</p>
+                <p>Dirección: San Luis- Capital</p>
+            </div>
+            <div class="footer-seccion">
+                <h3>Redes Sociales</h3>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </header>
+</body>
+</html>
+
+
+
