@@ -29,6 +29,5 @@ function moverCarrusel(direction) {
     mostrarImagen(currentIndex + direction);
 }
 
-// Muestra la primera imagen al cargar
 mostrarImagen(currentIndex);
 
