@@ -86,5 +86,27 @@ function validateForm() {
     
         return false; // Evitar el envío real del formulario
     }
+    function showSubmittedData(name, email, phone) {
+        const submittedDataDiv = document.getElementById('submitted-data');
     
+        // Crear elementos para mostrar los datos
+        const title = document.createElement('h2');
+        title.textContent = 'Datos enviados';
+    
+        const nameParagraph = document.createElement('p');
+        nameParagraph.textContent = `Nombre: ${name}`;
+    
+        const emailParagraph = document.createElement('p');
+        emailParagraph.textContent = `Correo electrónico: ${email}`;
+    
+        const phoneParagraph = document.createElement('p');
+        phoneParagraph.textContent = `Teléfono: ${phone}`;
+    
+        // Limpiar contenido anterior y agregar nuevos datos
+        submittedDataDiv.innerHTML = '';
+        submittedDataDiv.appendChild(title);
+        submittedDataDiv.appendChild(nameParagraph);
+        submittedDataDiv.appendChild(emailParagraph);
+        submittedDataDiv.appendChild(phoneParagraph);
+    }
 
