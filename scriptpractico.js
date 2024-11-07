@@ -41,55 +41,48 @@ function validateForm() {
         const phone = document.getElementById('phone').value.trim();
         const message = document.getElementById('message').value.trim();
     
-        // Limpiar mensajes de error previos
         document.getElementById('name-error').textContent = '';
         document.getElementById('email-error').textContent = '';
         document.getElementById('phone-error').textContent = '';
-        document.getElementById('message-error').textContent = ''; // Limpieza del mensaje de error
+        document.getElementById('message-error').textContent = ''; 
     
         let isValid = true;
     
-        // Validación del nombre
         if (name === '' || name.length > 50) {
             document.getElementById('name-error').textContent = 'El nombre es obligatorio y debe tener menos de 50 caracteres.';
             isValid = false;
         }
     
-        // Validación del correo electrónico
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
             document.getElementById('email-error').textContent = 'Por favor, introduce un correo electrónico válido.';
             isValid = false;
         }
     
-        // Validación del teléfono
         const phonePattern = /^[0-9]{10}$/;
         if (!phonePattern.test(phone)) {
             document.getElementById('phone-error').textContent = 'El número de teléfono debe tener exactamente 10 dígitos.';
             isValid = false;
         }
     
-        // Validación del mensaje (mínimo 50 y máximo 300 caracteres)
-        if (message.length < 50) {
-            document.getElementById('message-error').textContent = 'El mensaje debe tener al menos 50 caracteres.';
+        if (message.length < 20) {
+            document.getElementById('message-error').textContent = 'El mensaje debe tener al menos 20 caracteres.';
             isValid = false;
         } else if (message.length > 300) {
             document.getElementById('message-error').textContent = 'El mensaje no puede exceder los 300 caracteres.';
             isValid = false;
         }
     
-        // Si todos los datos son válidos, mostrar los datos enviados y limpiar el formulario
         if (isValid) {
             showSubmittedData(name, email, phone, message);
             document.getElementById('contact-form').reset();
         }
     
-        return false; // Evitar el envío real del formulario
+        return false; 
     }
     function showSubmittedData(name, email, phone) {
         const submittedDataDiv = document.getElementById('submitted-data');
     
-        // Crear elementos para mostrar los datos
         const title = document.createElement('h2');
         title.textContent = 'Datos enviados';
     
@@ -102,7 +95,6 @@ function validateForm() {
         const phoneParagraph = document.createElement('p');
         phoneParagraph.textContent = `Teléfono: ${phone}`;
     
-        // Limpiar contenido anterior y agregar nuevos datos
         submittedDataDiv.innerHTML = '';
         submittedDataDiv.appendChild(title);
         submittedDataDiv.appendChild(nameParagraph);
