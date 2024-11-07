@@ -77,12 +77,13 @@ function validateForm() {
             showSubmittedData(name, email, phone, message);
             document.getElementById('contact-form').reset();
         }
-    
+
+        showSubmittedData(name, email, phone, message);
         return false; 
     }
-    function showSubmittedData(name, email, phone) {
+    function showSubmittedData(name, email, phone, message) {
         const submittedDataDiv = document.getElementById('submitted-data');
-    
+        
         const title = document.createElement('h2');
         title.textContent = 'Datos enviados';
     
@@ -95,10 +96,13 @@ function validateForm() {
         const phoneParagraph = document.createElement('p');
         phoneParagraph.textContent = `Teléfono: ${phone}`;
     
+        const messageParagraph = document.createElement('p');
+        messageParagraph.textContent = `Mensaje: ${message}`;
+    
         submittedDataDiv.innerHTML = '';
         submittedDataDiv.appendChild(title);
         submittedDataDiv.appendChild(nameParagraph);
         submittedDataDiv.appendChild(emailParagraph);
         submittedDataDiv.appendChild(phoneParagraph);
+        submittedDataDiv.appendChild(messageParagraph);
     }
-
