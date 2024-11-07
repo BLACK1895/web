@@ -93,7 +93,6 @@ function showSubmittedData(name, email, phone) {
     const phoneParagraph = document.createElement('p');
     phoneParagraph.textContent = `Teléfono: ${phone}`;
 
-    // Limpiar contenido anterior y agregar nuevos datos
     submittedDataDiv.innerHTML = '';
     submittedDataDiv.appendChild(title);
     submittedDataDiv.appendChild(nameParagraph);
