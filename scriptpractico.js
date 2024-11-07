@@ -64,6 +64,8 @@ function validateForm() {
     }
 
     showSubmittedData(name, email, phone, message);
+
+    document.getElementById('contact-form').reset();
     return false; 
 }
 
