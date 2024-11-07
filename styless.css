@@ -293,6 +293,12 @@ button:hover {
     margin-top: 20px;
     font-size: 18px;
 }
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
 
 
 /*producto*/
