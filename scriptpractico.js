@@ -39,63 +39,42 @@ function validateForm() {
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-    // Limpiar mensajes de error previos
     document.getElementById('name-error').textContent = '';
     document.getElementById('email-error').textContent = '';
     document.getElementById('phone-error').textContent = '';
+    document.getElementById('message-error').textContent = '';
 
     let isValid = true;
 
-    // Validación del nombre (obligatorio, máximo 50 caracteres)
     if (name === '' || name.length > 50) {
         document.getElementById('name-error').textContent = 'El nombre es obligatorio y debe tener menos de 50 caracteres.';
         isValid = false;
     }
 
-    // Validación del correo electrónico (formato y campo obligatorio)
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
         document.getElementById('email-error').textContent = 'Por favor, introduce un correo electrónico válido.';
         isValid = false;
     }
 
-    // Validación del teléfono (debe ser exactamente 10 dígitos)
     const phonePattern = /^[0-9]{10}$/;
     if (!phonePattern.test(phone)) {
         document.getElementById('phone-error').textContent = 'El número de teléfono debe tener exactamente 10 dígitos.';
         isValid = false;
     }
 
-    // Si todos los datos son válidos, mostrar los datos enviados y limpiar el formulario
+    if (message === '' || message.length > 300) {
+        document.getElementById('message-error').textContent = 'El mensaje es obligatorio y debe tener menos de 300 caracteres.';
+        isValid = false;
+    }
+
     if (isValid) {
-        showSubmittedData(name, email, phone);
+        showSubmittedData(name, email, phone, message);
         document.getElementById('contact-form').reset();
     }
 
-    return false; // Evitar el envío real del formulario
+    return false; 
 }
 
-// Función para mostrar los datos enviados usando createElement
-function showSubmittedData(name, email, phone) {
-    const submittedDataDiv = document.getElementById('submitted-data');
-
-    // Crear elementos para mostrar los datos
-    const title = document.createElement('h2');
-    title.textContent = 'Datos enviados';
-
-    const nameParagraph = document.createElement('p');
-    nameParagraph.textContent = `Nombre: ${name}`;
-
-    const emailParagraph = document.createElement('p');
-    emailParagraph.textContent = `Correo electrónico: ${email}`;
-
-    const phoneParagraph = document.createElement('p');
-    phoneParagraph.textContent = `Teléfono: ${phone}`;
-
-    submittedDataDiv.innerHTML = '';
-    submittedDataDiv.appendChild(title);
-    submittedDataDiv.appendChild(nameParagraph);
-    submittedDataDiv.appendChild(emailParagraph);
-    submittedDataDiv.appendChild(phoneParagraph);
-}
