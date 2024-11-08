@@ -194,18 +194,27 @@ margin-top: 20px;
 
 
 .carrusel-imagenes {
-    display: flex; 
-    transition: transform 0.5s ease; 
+    width: 364px;
+    height: 300px; 
+    overflow: hidden;
+    position: relative;
+    display: inline;
+    align-items: center;
+    justify-content: center;
 }
 
-.carrusel-imagenes img {
-    width: 100%; 
+.carrusel-imagenes .carrusel-imagen {
     display: none; 
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.carrusel-imagenes img.active {
+.carrusel-imagenes .carrusel-imagen.active {
     display: block; 
 }
+
+
 
 .btn-prev, .btn-next {
     position: absolute; 
@@ -219,11 +228,11 @@ margin-top: 20px;
 }
 
 .btn-prev {
-    left: 10px; 
+    left: 123px; 
 }
 
 .btn-next {
-    right: 10px; 
+    right: 121px; 
 }
 
 .btn-prev:hover, .btn-next:hover {
