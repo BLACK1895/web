@@ -16,7 +16,7 @@ function inicializarCarrusel() {
         const img = document.createElement("img");
         img.src = src;
         img.alt = `Imagen ${index + 1}`;
-        img.classList.add("carrusel-imagen");  
+        img.classList.add("carrusel-imagen");
         if (index === 0) img.classList.add("active"); 
         contenedorCarrusel.appendChild(img);
     });
