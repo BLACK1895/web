@@ -47,7 +47,7 @@
 
             <ul>
 
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#Inicio">Inicio</a></li>
 
                 <li><a href="Pproductos.html">Producto</a></li>
 
@@ -78,21 +78,20 @@
 
     </header>
     
-        <div class="contenedor-carrusel">
-            <div class="carrusel">
-                <div class="carrusel-imagenes">
-                    <img src="images/dogis.png" alt="Imagen 1" class="active">
-                    <img src="images/gatooferta.png" alt="Imagen 2">
-                    <img src="images/oferta.png" alt="Imagen 3">
-                </div>
-                <button class="btn-prev" onclick="moverCarrusel(-1)">&#10094;</button>
-                <button class="btn-next" onclick="moverCarrusel(1)">&#10095;</button>
+    <div class="contenedor-carrusel">
+        <div class="carrusel">
+            <div class="carrusel-imagenes" id="carrusel-imagenes">
+                <!-- Las imágenes se agregarán dinámicamente -->
             </div>
-            <div class="texto-al-lado">
-                <h1>¡Bienvenidos! Calidad 100% asegurada para tu mascota</h1>
-                <p>En nuestra tienda, nos comprometemos a ofrecer productos de la más alta calidad para el bienestar de tu mascota. Cada artículo es cuidadosamente seleccionado y evaluado para garantizar que cumple con los más estrictos estándares. Con nosotros, puedes tener la tranquilidad de que la salud y felicidad de tu compañero están en las mejores manos. ¡Calidad 100% asegurada para tu mascota!</p>
-            </div>
+            <button class="btn-prev" onclick="moverCarrusel(-1)">&#10094;</button>
+            <button class="btn-next" onclick="moverCarrusel(1)">&#10095;</button>
         </div>
+        <div class="texto-al-lado">
+            <h1>¡Bienvenidos! Calidad 100% asegurada para tu mascota</h1>
+            <p>En nuestra tienda, nos comprometemos a ofrecer productos de la más alta calidad para el bienestar de tu mascota. Cada artículo es cuidadosamente seleccionado y evaluado para garantizar que cumple con los más estrictos estándares. Con nosotros, puedes tener la tranquilidad de que la salud y felicidad de tu compañero están en las mejores manos. ¡Calidad 100% asegurada para tu mascota!</p>
+        </div>
+    </div>
+    
 
         <div class="logos">
             <div class="logo-item">
